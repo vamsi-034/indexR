@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anime Central</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  nav {
+    background-color: #444;
+    padding: 10px 0;
+    text-align: center;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+  }
+  .featured-anime {
+    background-image: url('featured-anime.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  .anime-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+  }
+  .anime-card {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .anime-card img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Anime Central</h1>
+    <p>Your Gateway to the Anime World</p>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Popular Anime</a>
+    <a href="#">New Releases</a>
+    <a href="#">Genres</a>
+    <a href="#">About Us</a>
+  </nav>
+  <section class="featured-anime">
+    <div>
+      <h2>Featured Anime</h2>
+      <p>Discover the Best of Anime</p>
+      <button onclick="playTrailer()">Watch Trailer</button>
+    </div>
+  </section>
+  <section class="anime-list">
+    <div class="anime-card">
+      <img src="anime1.jpg" alt="Anime 1">
+      <h3>Anime Title 1</h3>
+    </div>
+    <div class="anime-card">
+      <img src="anime2.jpg" alt="Anime 2">
+      <h3>Anime Title 2</h3>
+    </div>
+    <!-- More anime cards can be added here -->
+  </section>
+  <script>
+    function playTrailer() {
+      alert("Trailer is playing!");
+    }
+  </script>
+</body>
+</html>
