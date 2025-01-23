@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/90e706591e.js" crossorigin="anonymous">
+        </script>
+        <style>
+            body {
+                background-color: rgb(29, 29, 70);
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+            }
+            .cal{
+                width: 600px;
+                height: 650px;
+                background-color: white;
+                border-radius: 20px;
+                background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+                overflow: hidden;
+            }
+            #display{
+                margin-top: 15px;
+                margin-left: 5px;
+                width: 92%;
+                padding: 20px;
+                border-radius: 20px;
+                overflow: hidden;
+                font-size: larger;
+            }
+            .opb{
+                background-color: hsl(30,100%,50%);
+            }
+            #key{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap:10px;
+                padding: 25px;
+            }
+            button{
+                width:100px ;
+                height:100px ;
+                border-radius: 50px;
+                border: none;
+                color: white;
+                background-color: transparent;
+                font-weight: bold;
+                cursor: pointer;
+                font-size: x-large;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cal">
+            <input id="display" readonly>
+            <div id="key">
+                <button onclick="n('+')" class="opb">+</button>
+                <button onclick="n('7')">7</button>
+                <button onclick="n('8')">8</button>
+                <button onclick="n('9')">9</button>
+                <button onclick="n('-')" class="opb">-</button>
+                <button onclick="n('4')">4</button>
+                <button onclick="n('5')">5</button>
+                <button onclick="n('6')">6</button>
+                <button onclick="n('*')" class="opb">*</button>
+                <button onclick="n('1')">1</button>
+                <button onclick="n('2')">2</button>
+                <button onclick="n('3')">3</button>
+                <button onclick="n('/')" class="opb">/</button>
+                <button onclick="n('0')">0</button>
+                <button onclick="n('.')">.</button>
+                <button onclick="et('')">=</button>
+                <button onclick="c()" class="opb">c</button>
+                <button onclick="p('^')">^</button>
+            </div>
+        </div>
+        <script>
+            const d=document.getElementById("display")
+            function n(input){
+                d.value +=input;
+            } 
+            function c(){
+                d.value='';
+            }
+            function et(){
+                try{
+                    d.value=eval(d.value);
+                }catch{
+                    d.value='Error';
+                }
+            }
+        </script>
+    </body>
+</html>
